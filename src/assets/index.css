@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* LIGHT SHADES */
+    --light-100: 0, 0%, 100%;
+    --light-200: 0, 0%, 95%;
+    --light-300: 0, 0%, 90%;
+    --light-400: 0, 0%, 85%;
+    --light-500: 0, 0%, 80%;
+    /* DARK SHADES */
+    --dark-100: 0, 0%, 25%;
+    --dark-200: 0, 0%, 20%;
+    --dark-300: 0, 0%, 15%;
+    --dark-400: 0, 0%, 10%;
+    --dark-500: 0, 0%, 5%;
+    --dark-600: 0, 0%, 2%;
+
+    --alert-100: 227, 100%, 63%;
+
+    /* --- THEME --- */
+
+    --background: var(--light-200);
+    --foreground: var(--dark-500);
+
+    --alert: var(--alert-100);
+
+    --muted: var(--light-400);
+    --muted-foreground: var(--light-500);
+
+    --popover: var(--light-100);
+    --popover-foreground: var(--dark-500);
+
+    --card: var(--light-100);
+    --card-foreground: var(--dark-500);
+
+    --sidebar: var(--light-100);
+    --sidebar-foreground: var(--dark-500);
+
+    --border: var(--light-300);
+    --input: var(--light-300);
+
+    --primary: 227, 100%, 63%;
+    --primary-foreground: var(--light-100);
+
+    --secondary: 191, 99%, 53%;
+    --secondary-foreground: var(--light-100);
+
+    --accent: var(--light-300);
+    --accent-foreground: var(--dark-500);
+
+    --destructive: 348, 68%, 50%;
+    --destructive-foreground: var(--light-100);
+
+    --success: 158, 64%, 52%;
+    --success-foreground: var(--light-100);
+
+    --warning: 38, 92%, 50%;
+    --warning-foreground: var(--dark-500);
+
+    --ring: var(--primary);
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: var(--dark-500);
+    --foreground: var(--light-100);
+
+    --muted: var(--dark-400);
+    --muted-foreground: var(--light-500);
+
+    --popover: var(--dark-300);
+    --popover-foreground: var(--light-100);
+
+    --card: var(--dark-400);
+    --card-foreground: var(--light-100);
+
+    --card: var(--dark-400);
+    --card-foreground: var(--light-100);
+
+    --sidebar: var(--dark-400);
+    --sidebar-foreground: var(--light-100);
+
+    --border: var(--dark-300);
+    --input: var(--dark-300);
+
+    --accent: var(--dark-200);
+    --accent-foreground: var(--light-100);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
