@@ -107,6 +107,12 @@ const editor = useEditor({
           — Mom
         </blockquote>
       `,
+  editorProps: {
+    attributes: {
+      class:
+        "prose dark:prose-invert prose-sm sm:prose-base lg:prose-lg xl:prose-xl m-5 focus:outline-none",
+    },
+  },
   extensions: [
     Document,
     Paragraph,
@@ -124,7 +130,7 @@ const editor = useEditor({
       allowBase64: true,
     }),
     Heading.configure({
-      levels: [1, 2, 3],
+      levels: [1, 2, 3, 4, 5, 6],
     }),
     TextAlign.configure({
       types: ["heading", "paragraph"],
@@ -1011,7 +1017,7 @@ function addImage() {
           @click="editor.chain().toggleBold().run()"
         />
       </floating-menu>
-      <editor-content :editor="editor" class="px-2 py-4" />
+      <editor-content :editor="editor" class="px-2 py-4 bg-light-100" />
       <div class="character-count" v-if="editor">
         {{ editor.storage.characterCount.characters() }}/{{ limit }} characters
         <br />
